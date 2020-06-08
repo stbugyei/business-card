@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .container {
+    width: 1320px;
+    margin: 0 auto;
+  }
+/* 
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    min-height: auto;
+  } */
+
+ 
+  .card{
+    position: relative; 
+    width: 18%;
+    overflow: hidden;
+    background: #fff;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+    transition: all 0.3s ease-out;
+  } 
+
+ .image{
+    width: 100%;
+    height: 30vh; 
+    position: absolute;
+    transition: transform 0.3s ease-out;
+  }
+
+ .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .info{
+    margin: 15px;
+  } 
+
+  .info-name{
+    margin-top: 15px;
+    font-size: 22px;
+    text-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+    padding-bottom: 10px;
+    font-weight: 600;
+  }
+
+.info-content {
+    font-size: 14px;
+    padding: 10px;
+    border-left: 2px solid rgb(109, 36, 177);
+    padding-bottom: 10px;;
+    transition: all 0.3s ease-in-out;
+}
+
+/*contact*/
+
+.contact{
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.mobile, .email, .location{
+    color: #1A237E;
+
+}
+
+
+i.fas, .far {
+    font-size: 1em;
+    width: 1.6em;
+    text-align: center;
+    line-height: 1.6em;
+    border-radius: 0.8em; 
+    background: #fff;
+    box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.fas, .far{
+    margin-right: 10px;
+}
+
+.contact-info li a{
+     display: block; 
+}
+
+.contact-info li{
+    margin: 7px 0;
+    margin-right: -100px;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+}
+
+.card:hover .contact-info li{
+    opacity: 1; 
+    margin-left: 4px;
+}
+
+
+ .card:hover .contact-info li:nth-child(1){
+    transition-delay: 0.2s;
+  }
+
+  .card:hover .contact-info li:nth-child(3){
+    transition-delay: 0.3s;
+  }
+
+
+/* .social-media{
+    margin: 0 15px;
+} */
+
+.social-media__content{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    position: absolute; 
+    top: 30%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 3; 
+}
+
+.social-media__content li{   
+    margin: 0 5px;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+ .social-media__content li a{
+    display: block;
+    opacity: 0; 
+    transform: translateY(200px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}  
+
+
+i.fa, .fab {
+    font-size: 1em;
+    width: 1.6em;
+    text-align: center;
+    line-height: 1.6em;
+    border-radius: 0.8em; 
+    background: #fff;
+    box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+.linkedin{
+    color: #007bb5;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23); 
+}
+
+.github{
+    color: #000;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23); 
+}
+
+.facebook{
+    font-size: 1em;
+    color:#3b5998;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);   
+}
+
+.twitter{
+    color: #1da1f2;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+
+ }
+
+ .instagram{
+    color: #c32aa3;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+     
+ } 
+
+
+.card:hover .image img{
+    opacity: 0.7;
+  }
+
+ .card:hover .image{
+   transform: translateY(-100px);
+  }
+
+  .card:hover .info{
+    margin-top: 150px;
+   }
+
+
+  .card:hover > span .social-media__content > li > a{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card:hover > span .social-media__content > li:nth-child(2) a{
+    transition-delay: 0.1s;
+  }
+
+  .card:hover > span .social-media__content > li:nth-child(3) a{
+    transition-delay: 0.2s;
+  }
+
+  .card:hover > span .social-media__content > li:nth-child(4) a{
+    transition-delay: 0.3s;
+  }
+
+  .card:hover > span .social-media__content > li:nth-child(5) a{
+    transition-delay: 0.4s;
+  } 
+
+  .social-media__content li:hover{
+    color: rgb(109, 36, 177);
+    transform: scale(1.3);
+}
+
+a:hover{
+    color: rgb(109, 36, 177);
+}
+
+
+
+ 
+
