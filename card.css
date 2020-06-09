@@ -10,6 +10,10 @@
 
   body{
     font-family: 'Poppins', sans-serif;
+    background-image: url(./paper.jpg); 
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: cover;
   }
 
    .container {
@@ -27,10 +31,10 @@
 
   .card{
     position: relative;
-    width: 18%;
+    width: 22%;
     overflow: hidden;
     background: #f1f1f1;
-    margin: 50px auto;
+    margin: 200px auto;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -62,22 +66,18 @@
 
 
   .info-name{
-    margin-top: 80px;
+    text-align: center;
+    margin-top: 90px;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 26px;
     text-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
-    padding-bottom: 10px;
     font-weight: 600;
   }
 
 
 .info-content {
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px;
-    border-left: 2px groove rgb(109, 36, 177);
-    padding-bottom: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
     transform: translateX(200px);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
@@ -93,7 +93,7 @@
 }
 
 .contact-info{
-    margin-top: -10px;
+     margin-top: -15px; 
 }
 
 .contact-info li a{
@@ -172,14 +172,14 @@ i.fas, .far {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 42%;
+    top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
 }
 
 .social-media__content li{
-    margin: 0 5px;
+    margin: 0 10px;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
@@ -238,7 +238,7 @@ i.fa, .fab {
  */
 
  .card:hover .image{
-    transform: translateY(-50px);
+    transform: translateY(-35px);
    }
 
 
@@ -286,10 +286,10 @@ i.fa, .fab {
 
 .my-name{
     opacity: 1;
-    margin-left: 15px;
-    margin-top: -40px;
+    text-align: center;
+    margin-top: -45px;  
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 26px;
     text-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
     font-weight: 600;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out; 
