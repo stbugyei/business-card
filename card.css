@@ -7,16 +7,16 @@
     list-style: none;
     text-decoration: none;
 }
-  
+
   body{
     font-family: 'Poppins', sans-serif;
   }
 
-  .container {
+   .container {
     width: 1320px;
     margin: 0 auto;
   }
-/* 
+/*
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -25,74 +25,106 @@
     min-height: auto;
   } */
 
- 
   .card{
-    position: relative; 
+    position: relative;
     width: 18%;
     overflow: hidden;
-    background: #fff;
-    margin: 0 auto;
+    background: #f1f1f1;
+    margin: 50px auto;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
-    transition: all 0.3s ease-out;
-  } 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    transition: all 0.3s ease-in-out;
+  }
 
  .image{
     width: 100%;
-    height: 30vh; 
+    height: 272.1px;
     position: absolute;
     transition: transform 0.3s ease-out;
-  }
+}
+
 
  .image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease-out;
-  }
+}
+
 
   .info{
     margin: 15px;
-  } 
+    opacity: 0;
+    transition: 1s;
+  }
+
 
   .info-name{
-    margin-top: 15px;
+    margin-top: 80px;
+    text-transform: uppercase;
     font-size: 22px;
     text-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
     padding-bottom: 10px;
     font-weight: 600;
   }
 
+
 .info-content {
     font-size: 14px;
     padding: 10px;
-    border-left: 2px solid rgb(109, 36, 177);
-    padding-bottom: 10px;;
-    transition: all 0.3s ease-in-out;
+    border-left: 2px groove rgb(109, 36, 177);
+    padding-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transform: translateX(200px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-/*contact*/
+/*
+== contact styles ==
+*/
 
 .contact{
+    transition: all 0.3 ease-in-out;
     margin: 0 15px;
     font-size: 14px;
 }
 
-.mobile, .email, .location{
-    color: #1A237E;
-
+.contact-info{
+    margin-top: -10px;
 }
 
+.contact-info li a{
+    transition: all 0.3s ease-in;
+    display: block;
+}
+
+
+.contact-info li{
+    margin: 7px 0;
+    margin-left: -100px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.mobile, .email, .location{
+    color: rgb(109, 36, 177);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+}
+
+
+/*
+== Rounding contact media icons ==
+*/
 
 i.fas, .far {
     font-size: 1em;
     width: 1.6em;
     text-align: center;
     line-height: 1.6em;
-    border-radius: 0.8em; 
+    border-radius: 0.8em;
     background: #fff;
     box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
 }
@@ -101,20 +133,24 @@ i.fas, .far {
     margin-right: 10px;
 }
 
-.contact-info li a{
-     display: block; 
+
+/*
+== Contact hovering effect ==
+*/
+
+.contact-info li a:hover{
+    padding-left: 10px;
+    color:#3b5998;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
 }
 
-.contact-info li{
-    margin: 7px 0;
-    margin-right: -100px;
-    opacity: 0;
-    transition: all 0.3s ease;
-
+.card:hover .info{
+    opacity: 1;
 }
+
 
 .card:hover .contact-info li{
-    opacity: 1; 
+    opacity: 1;
     margin-left: 4px;
 }
 
@@ -135,51 +171,54 @@ i.fas, .far {
 .social-media__content{
     display: flex;
     justify-content: center;
-    margin-top: 15px;
-    position: absolute; 
-    top: 30%;
-    left: 50%; 
+    position: absolute;
+    top: 42%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3; 
+    z-index: 3;
 }
 
-.social-media__content li{   
+.social-media__content li{
     margin: 0 5px;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
  .social-media__content li a{
     display: block;
-    opacity: 0; 
-    transform: translateY(200px);
+    opacity: 0;
+    transform: translateX(200px);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}  
+}
 
+
+/*
+== Rounding Social media icons ==
+*/
 
 i.fa, .fab {
     font-size: 1em;
     width: 1.6em;
     text-align: center;
     line-height: 1.6em;
-    border-radius: 0.8em; 
+    border-radius: 0.8em;
     background: #fff;
     box-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
 }
 
 .linkedin{
     color: #007bb5;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23); 
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
 }
 
 .github{
     color: #000;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23); 
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
 }
 
 .facebook{
     font-size: 1em;
     color:#3b5998;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);   
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
 }
 
 .twitter{
@@ -191,54 +230,78 @@ i.fa, .fab {
  .instagram{
     color: #c32aa3;
     text-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
-     
- } 
 
+ }
 
-.card:hover .image img{
-    opacity: 0.7;
-  }
+ /*
+ ==hovering effects==
+ */
 
  .card:hover .image{
-   transform: translateY(-100px);
-  }
+    transform: translateY(-50px);
+   }
+
+
+ .card:hover .image img{
+    opacity: 0.8;
+    }
+
 
   .card:hover .info{
     margin-top: 150px;
    }
 
 
-  .card:hover > span .social-media__content > li > a{
+   .card:hover .info-content{
     opacity: 1;
     transform: translateY(0);
   }
 
-  .card:hover > span .social-media__content > li:nth-child(2) a{
+
+  .card:hover span .social-media__content li a{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card:hover span .social-media__content li:nth-child(2) a{
     transition-delay: 0.1s;
   }
 
-  .card:hover > span .social-media__content > li:nth-child(3) a{
+  .card:hover span .social-media__content li:nth-child(3) a{
     transition-delay: 0.2s;
   }
 
-  .card:hover > span .social-media__content > li:nth-child(4) a{
+  .card:hover span .social-media__content li:nth-child(4) a{
     transition-delay: 0.3s;
   }
 
-  .card:hover > span .social-media__content > li:nth-child(5) a{
+  .card:hover span .social-media__content li:nth-child(5) a{
     transition-delay: 0.4s;
-  } 
+  }
 
   .social-media__content li:hover{
     color: rgb(109, 36, 177);
     transform: scale(1.3);
 }
 
-a:hover{
-    color: rgb(109, 36, 177);
+.my-name{
+    opacity: 1;
+    margin-left: 15px;
+    margin-top: -40px;
+    text-transform: uppercase;
+    font-size: 22px;
+    text-shadow:0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+    font-weight: 600;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; 
+    /* transition: 1s; */
+}
+
+.card:hover .my-name{
+    opacity: 0;
 }
 
 
 
- 
+
+
 
